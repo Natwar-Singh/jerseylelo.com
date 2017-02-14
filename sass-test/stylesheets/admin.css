@@ -1,0 +1,57 @@
+/* line 2, ../sass/admin.scss */
+body {
+  background-color: #210505;
+  color: #515656;
+}
+/* line 4, ../sass/admin.scss */
+body h1 {
+  text-align: center;
+  color: lightblue;
+}
+/* line 9, ../sass/admin.scss */
+body .positions .position-name {
+  width: 100px;
+  box-sizing: border-box;
+  margin: 0px;
+  display: inline-block;
+}
+/* line 14, ../sass/admin.scss */
+body .positions input {
+  background-color: #4a3131;
+  border-color: #653939;
+  display: inline-block;
+  margin: auto;
+  margin-top: 5px;
+}
+/* line 23, ../sass/admin.scss */
+body .user_list {
+  float: right;
+  width: 70%;
+}
+/* line 26, ../sass/admin.scss */
+body .user_list table {
+  border: 2px solid black;
+  border-collapse: collapse;
+}
+/* line 29, ../sass/admin.scss */
+body .user_list table tr {
+  border: 2px solid black;
+}
+/* line 30, ../sass/admin.scss */
+body .user_list table tr td, body .user_list table tr th {
+  padding: 0px 5px;
+}
+/* line 32, ../sass/admin.scss */
+body .user_list table tr td a, body .user_list table tr th a {
+  color: #515656;
+  text-decoration: none;
+}
+/* line 36, ../sass/admin.scss */
+body .user_list table tr td a:hover, body .user_list table tr th a:hover {
+  color: #515656;
+  text-decoration: underline;
+}
+/* line 44, ../sass/admin.scss */
+body .positions {
+  float: left;
+}

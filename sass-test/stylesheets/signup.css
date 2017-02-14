@@ -1,0 +1,36 @@
+/* line 1, ../sass/signup.scss */
+#signup {
+  position: absolute;
+  display: none;
+  width: 40%;
+  height: 300px;
+  background-image: url(../../popup.jpg);
+  background-size: 100%;
+  margin-left: 400px;
+  margin-top: 200px;
+}
+/* line 10, ../sass/signup.scss */
+#signup p {
+  padding: 1px;
+}
+/* line 13, ../sass/signup.scss */
+#signup #form {
+  margin-top: 20px;
+}
+/* line 14, ../sass/signup.scss */
+#signup #form .signup {
+  width: 50%;
+  display: block;
+  margin: auto;
+  border-collapse: collapse;
+  margin-top: 8px;
+}
+/* line 22, ../sass/signup.scss */
+#signup #form #signup_button {
+  border: 2px solid #ff9d00;
+  color: #ff9d00;
+}
+/* line 27, ../sass/signup.scss */
+#signup #form #signup_button:hover {
+  background-color: black;
+}

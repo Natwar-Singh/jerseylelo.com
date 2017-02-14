@@ -1,0 +1,33 @@
+/* line 2, ../sass/users.scss */
+body {
+  background-color: #210505;
+  color: #515656;
+}
+/* line 5, ../sass/users.scss */
+body .user_list {
+  float: right;
+  width: 70%;
+}
+/* line 8, ../sass/users.scss */
+body .user_list table {
+  border: 2px solid black;
+  border-collapse: collapse;
+}
+/* line 11, ../sass/users.scss */
+body .user_list table tr {
+  border: 2px solid black;
+}
+/* line 12, ../sass/users.scss */
+body .user_list table tr td, body .user_list table tr th {
+  padding: 0px 5px;
+}
+/* line 14, ../sass/users.scss */
+body .user_list table tr td a, body .user_list table tr th a {
+  color: #515656;
+  text-decoration: none;
+}
+/* line 18, ../sass/users.scss */
+body .user_list table tr td a:hover, body .user_list table tr th a:hover {
+  color: #515656;
+  text-decoration: underline;
+}

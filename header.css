@@ -1,0 +1,40 @@
+.nav-button{
+	float: right;
+	text-decoration: none;
+	margin-left:20px;
+	height: 30px;
+	text-align: center;
+	padding-top: 4px;
+	font-size: 20px;
+	box-sizing: border-box;
+	color:white; 
+}
+.nav-button:hover{
+	text-decoration: underline;
+}
+#top::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+.menu{
+
+    width: 25px;
+    height: 3px;
+    background-color:white;
+    margin: 6px 0;
+
+}
+.btn{
+	background-color: rgba(1,1,1,0);
+	
+	color: white;
+	border: none;
+	padding: 4px;
+}
+.dropdown{
+float: right;	
+}
+.dropdown-menu{
+	left: -80px;
+}

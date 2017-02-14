@@ -1,0 +1,17 @@
+/* line 1, ../sass/image-gallery.scss */
+body {
+  margin: 0px;
+  background-color: #210505;
+}
+/* line 3, ../sass/image-gallery.scss */
+body .image {
+  padding: 10px;
+  display: inline-block;
+  width: 50%;
+  box-sizing: border-box;
+  display: inline-block;
+}
+/* line 8, ../sass/image-gallery.scss */
+body .image img {
+  width: 100%;
+}

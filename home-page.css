@@ -1,0 +1,70 @@
+body{
+	background-image: url(male.jpg);
+	background-size: 100% ;
+
+}
+
+#content{
+	display: flex;
+	justify-content: space-between;
+	margin-top: 15%
+
+}
+
+select,input{
+	border:2px solid white;
+	border-radius: 12px;
+	background-color:rgba(54, 25, 25, .0);
+	color: white;
+	width: 300px;
+	height: 40px;
+	border-collapse: collapse;
+	display: block;
+	margin-top: 20px;
+	box-sizing: border-box;
+	text-align: center;
+	font-size: 20px;
+}
+
+select option{
+	background:rgba(54, 25, 25, .6);
+	border-collapse: collapse;
+	margin: auto;
+	display: inline-block;
+}
+#info{
+	width:300px;
+    margin-left: 10%;
+}
+#kick-off{
+	color: rgb(255, 157, 0);;
+	margin: auto;
+	border:2px solid rgb(255, 157, 0);;
+	border-radius: 10px;
+	width: 125px;
+	display: block;
+	text-align: center;
+	margin: 20px auto;
+	height: 45px;
+	font-size: 20px;
+	text-decoration: none;
+}
+#kick-off:hover{
+	background-color: black;
+}
+#tagline{ 
+	width: 360px;
+	color: white;
+	margin-top: 10PX;
+	font-family: 'Duru Sans';
+	font-size: 35px;
+	margin-right: 40px;
+}
+#tagline p{
+	margin: 0px;
+}
+#tagline p span{
+	margin: 0px;
+	background-color: rgb(255, 157, 0);
+	padding: 0 6px 0 4px;
+}

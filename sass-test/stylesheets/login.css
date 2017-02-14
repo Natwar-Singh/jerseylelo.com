@@ -1,0 +1,45 @@
+/* line 2, ../sass/login.scss */
+#login {
+  position: absolute;
+  display: none;
+  width: 40%;
+  height: 300px;
+  background-image: url(../../popup.jpg);
+  background-size: 100%;
+  margin-left: 400px;
+  margin-top: 200px;
+}
+/* line 11, ../sass/login.scss */
+#login #cross {
+  position: absolute;
+  top: -15px;
+  right: -13px;
+  color: #ff9d00;
+}
+/* line 17, ../sass/login.scss */
+#login #error {
+  color: red;
+  margin-top: 15px;
+  text-align: center;
+  font-size: 25px;
+}
+/* line 23, ../sass/login.scss */
+#login #form {
+  margin-top: 50px;
+}
+/* line 24, ../sass/login.scss */
+#login #form .login {
+  width: 50%;
+  display: block;
+  margin: auto;
+  border-collapse: collapse;
+}
+/* line 31, ../sass/login.scss */
+#login #form #login_button {
+  border: 2px solid #ff9d00;
+  color: #ff9d00;
+}
+/* line 36, ../sass/login.scss */
+#login #form #login_button:hover {
+  background-color: black;
+}
