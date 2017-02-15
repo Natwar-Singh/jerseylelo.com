@@ -1,11 +1,18 @@
+<?php session_start();
+ ?>
 <!DOCTYPE html>
 <html>
 <head>
 	<title></title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
+  </script>
+  <link rel="stylesheet" type="text/css" href="header.css">
+  <script type="text/javascript" src="header.js" ></script>
 	<link rel="stylesheet" type="text/css" href="sass-test/stylesheets/positions.css">
 </head>
 <body>
 <?php require 'connectdb.php'; ?>
+<?php require "header.php" ?>
   <?php 
     if(isset($_POST["Defender"]))
 	{
@@ -21,9 +28,9 @@
       }
 	}
 	?>
+  <h1>Positions</h1><br>
   <form action="admin.php" method="post" class="positions">
   <?php 
-    echo "<h3>Position:</h3><br>";
     $sql = 'SELECT * FROM position ';
     $result=$conn->query($sql);
     foreach ($result as $row)
@@ -36,8 +43,8 @@
 	   }
 
 	?>
-	 
-	<input type="submit" value="Update">
+	
+	<input type="submit" id="update" value="Update">
 	</form>
 </body>
 </html>

@@ -4,7 +4,7 @@ if(isset($_POST["email"])){
 function varify($email,$password){
     GLOBAL $conn;
     $match= false;
-    $sql = 'SELECT * FROM users where email = "'.$email.'" and password = "'.$password.'"';
+    $sql = 'SELECT * FROM users where email = "'.$email.'" and password = "'.md5($password).'"';
     $result=$conn->query($sql);
     foreach ($result as $row)
       { if($row['state']=="active"){
@@ -31,7 +31,7 @@ function varify($email,$password){
     
 ?>
 <div id="login">
-<a id="cross">&#x274C;</a>
+<a class="cross">&#x274C;</a>
 <?php
 
 if(isset($_POST["email"])){
@@ -44,12 +44,9 @@ $role_id=varify($email,$password);
     $result=$conn->query($sql);
     $set=$result->fetch();
     echo $_SESSION['role']=$set['role_name'];
-    // if($set['role_name']=="Admin"){
-    //   //header('Location:admin.php');
-    // }
-    // else{
+    
     header('Location: index.php');
-    //}
+    
   }
   }$conn=null;
  ?>

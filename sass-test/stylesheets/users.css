@@ -1,33 +1,36 @@
 /* line 2, ../sass/users.scss */
 body {
-  background-color: #210505;
-  color: #515656;
-}
-/* line 5, ../sass/users.scss */
-body .user_list {
-  float: right;
-  width: 70%;
+  background-image: url(../../male.jpg);
+  background-size: 100%;
+  color: white;
 }
 /* line 8, ../sass/users.scss */
-body .user_list table {
-  border: 2px solid black;
-  border-collapse: collapse;
-}
-/* line 11, ../sass/users.scss */
-body .user_list table tr {
-  border: 2px solid black;
+body .user_list h1 {
+  font-size: 40px;
+  text-align: center;
 }
 /* line 12, ../sass/users.scss */
-body .user_list table tr td, body .user_list table tr th {
-  padding: 0px 5px;
-}
-/* line 14, ../sass/users.scss */
-body .user_list table tr td a, body .user_list table tr th a {
-  color: #515656;
-  text-decoration: none;
+body .user_list table {
+  /*border: 2px solid black;*/
+  border-collapse: collapse;
+  margin: auto;
+  width: 70%;
 }
 /* line 18, ../sass/users.scss */
-body .user_list table tr td a:hover, body .user_list table tr th a:hover {
-  color: #515656;
+body .user_list table tr th {
+  text-align: left;
+}
+/* line 21, ../sass/users.scss */
+body .user_list table tr td, body .user_list table tr th {
+  padding: 5px 5px;
+  font-size: 20px;
+}
+/* line 25, ../sass/users.scss */
+body .user_list table tr td .edit, body .user_list table tr th .edit {
+  color: white;
+  text-decoration: none;
+}
+/* line 29, ../sass/users.scss */
+body .user_list table tr td .edit:hover, body .user_list table tr th .edit:hover {
   text-decoration: underline;
 }

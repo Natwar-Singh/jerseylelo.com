@@ -1,0 +1,64 @@
+/* line 1, ../sass/edit.scss */
+body {
+  background-image: url(../../male.jpg);
+  background-size: 100%;
+}
+/* line 4, ../sass/edit.scss */
+body #content {
+  width: 35%;
+  margin: auto;
+  margin-top: 150px;
+}
+/* line 8, ../sass/edit.scss */
+body #content h1 {
+  text-align: center;
+  color: white;
+}
+/* line 12, ../sass/edit.scss */
+body #content .edit-field {
+  width: 200px;
+  box-sizing: border-box;
+  margin: 0px;
+  display: inline-block;
+  font-size: 30px;
+  color: white;
+  margin: auto;
+}
+/* line 22, ../sass/edit.scss */
+body #content .edit-input {
+  border: 2px solid white;
+  border-radius: 12px;
+  background-color: rgba(54, 25, 25, 0);
+  color: white;
+  width: 250px;
+  height: 30px;
+  border-collapse: collapse;
+  margin-top: 15px;
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 20px;
+  margin: auto;
+  margin-top: 10px;
+}
+/* line 37, ../sass/edit.scss */
+body #content option {
+  background: rgba(54, 25, 25, 0.6);
+  color: white;
+}
+/* line 41, ../sass/edit.scss */
+body #content .permission {
+  display: inline-block;
+  text-align: center;
+  margin: 20px auto;
+  color: #ff9d00;
+  border: 2px solid #ff9d00;
+  background-color: rgba(1, 1, 1, 0);
+  width: 150px;
+  font-size: 20px;
+  border-radius: 12px;
+  text-decoration: none;
+}
+/* line 53, ../sass/edit.scss */
+body #content .permission:hover {
+  background-color: black;
+}

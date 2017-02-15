@@ -1,0 +1,60 @@
+body{
+	background-image: url(../../male.jpg);
+    background-size: 100% ;
+  #content{
+  	width: 35%;
+  	margin: auto;
+  	margin-top: 150px;
+  	h1{
+  		text-align: center;
+  		color: white;
+  	}
+  	.edit-field{
+
+		width: 200px;
+		box-sizing: border-box;
+		margin: 0px;
+		display: inline-block;
+	    font-size: 30px;
+	    color: white;
+	    margin: auto;
+  	}
+  	.edit-input{
+		    border:2px solid white;
+	        border-radius: 12px;
+	        background-color:rgba(54, 25, 25, .0);
+	        color: white;
+	        width: 250px;
+	        height: 30px;
+	        border-collapse: collapse;
+	        margin-top: 15px;
+	        box-sizing: border-box;
+	        text-align: center;
+	        font-size: 20px;
+	        margin: auto;
+	        margin-top: 10px;
+	        }
+	        option{
+			background:rgba(54, 25, 25, .6);
+			color:white;
+		    }
+	        .permission{
+			display: inline-block;
+	        text-align: center;
+	        margin: 20px auto;
+	        color:rgb(255, 157, 0);;
+	        border:2px solid rgb(255, 157, 0);
+	        background-color: rgba(1,1,1,0);
+	        width: 150px;
+	        font-size: 20px;
+	        border-radius: 12px;
+	        text-decoration: none;
+
+	        &:hover{
+	        	background-color:black;
+	        		        }
+			}
+
+
+  }
+}

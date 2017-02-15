@@ -2,16 +2,15 @@
 <?php
 if(isset($_SESSION['role'])){
          	if ($_SESSION['role']=="Admin") {
-         		echo '<div class="dropdown">
-            <button class="btn btn-primary dropdown-toggle" type="button"          data-toggle="dropdown">
-            <div class="menu"></div><div class="menu"></div><div class="menu"></div>
-            </button>
-            <ul class="dropdown-menu">
-              <li><a href="positions.php">Positions</a></li>
-              <li><a href="users.php">Users</a></li>
-            </ul>
-          
-         </div>';
+         		echo '<div class="wrap">
+                  <div class="icon">
+                  <div class="menu"></div><div class="menu"></div><div class="menu"></div>
+                  </div>
+                  <span class="dropdown-content">
+                  <a href="positions.php" class="dropdown-element">Positions</a>
+                  <a href="users.php" class="dropdown-element">Users</a>
+                  </span>
+                  </div>';
          	}
          }
 if (isset($_SESSION['user'])){

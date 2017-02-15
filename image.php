@@ -25,7 +25,7 @@
       // Allocate A Color For The Text
       $white = imagecolorallocate($jpg_image, 150, 150, 150);
       // Set Path to Font File
-      $font_path = '/var/www/jerseylelo.com/public-html/waste/verdana.ttf';
+      $font_path = '/var/www/jerseylelo.com/public-html/verdana.ttf';
       // Print Text On Image
       imagettftext($jpg_image, 40, 0, $x, $y, $white, $font_path, $text);
       imagettftext($jpg_image, 100, 0, $xn, $yn, $white, $font_path, $position_no);

@@ -7,6 +7,13 @@
 		background-size: 100%;
 		margin-left:400px;
 		margin-top: 200px;
+
+		.cross{
+		position: absolute;
+		top: -15px;
+		right: -13px;
+		color: rgb(255, 157, 0);
+	    }
 		p{
 			padding: 1px;
 		}

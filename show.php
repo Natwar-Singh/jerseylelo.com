@@ -15,17 +15,16 @@ $sql = 'SELECT url FROM images where f_id ="'.$f_id.'"';
 <meta property="og:image:height" content="315">
 <meta property="og:site_name" content="jerseylelo.com">
 <meta property="og:url" content="https://www.jerseylelo.com/show.php">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="home-page.js" ></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
+  </script>
+  <link rel="stylesheet" type="text/css" href="header.css">
+  <script type="text/javascript" src="header.js" ></script>
 	<title></title>
-	<link rel="stylesheet" type="text/css" href="header.css">
+
 	<link rel="stylesheet" type="text/css" href="sass-test/stylesheets/show.css">
 </head>
 <body>
 <?php
-
-
 echo '<body style="background-image: url('.$set['url'].');">';?>
 <?php require "header.php" ?>
  

@@ -6,6 +6,7 @@
 </head>
 <body>
 <div id="signup">
+<a class="cross">&#x274C;</a>
 <p></p>
 
 <form action="signup.php" method="post">
@@ -13,7 +14,12 @@
 <input type="text" name="name" placeholder="User Name" class="signup" required>
 <input type="email" name="email" placeholder="Email" class="signup" required>
 <input type="password" name="password" placeholder="Password" class="signup" required>
-<input type="text" name="player" placeholder="Player" class="signup">
+<!-- <input type="text" name="player" placeholder="Player" class="signup"> -->
+<select id="player" name="player" class="signup">
+           <option>SELECT PLAYER</option>
+           <option>MALE</option>
+           <option>FEMALE</option>
+        </select>
 <input type="submit" value="submit" class="signup" id="signup_button"></div>
 </form>
 </div>

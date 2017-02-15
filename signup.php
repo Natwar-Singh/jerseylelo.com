@@ -2,7 +2,7 @@
   session_start();
   $name= $_POST['name'];
   $email=$_POST['email'];
-  $password=$_POST['password'];
+  $password=md5($_POST['password']);
   $role_id=2;
   $player=$_POST['player'];
   require "connectdb.php";

@@ -1,22 +1,33 @@
 body
-{ background-color: #210505;
-	color: #515656;
+{ background-image: url(../../male.jpg);
+  background-size: 100% ;
+	color: white;
 	
 	.user_list{
-		float:right;
-		width: 70%;
+		
+		h1{
+			font-size: 40px;
+			text-align: center;
+		}
 		table{
-			border: 2px solid black;
+			/*border: 2px solid black;*/
 			border-collapse: collapse;
-			tr{border: 2px solid black;
+			margin: auto;
+			width :70%;
+			tr{
+				th{
+					text-align: left;
+				}
 			td,th{
-				padding: 0px 5px;
-				a{
-					color: #515656;
+				padding: 5px 5px;
+				font-size: 20px;
+
+				.edit{
+					color: white;
 					text-decoration: none;
 				
 				&:hover{
-					color: #515656;
+					
 					text-decoration: underline;
 				}}
 

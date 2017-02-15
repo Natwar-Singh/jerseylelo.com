@@ -1,19 +1,46 @@
 body
-{ background-color: #210505;
-	color: #515656;
+{ background-image: url(../../male.jpg);
+  background-size: 100% ;
+	h1{
+		text-align: center;
+		color: white;
+		padding-top: 100px;
+	}
 	
 	.positions{
+		margin: auto;
+		width:30%;
+		padding-top: 10px;
 	.position-name{
-		width: 100px;
+		width: 200px;
 		box-sizing: border-box;
 		margin: 0px;
-		display: inline-block;}
+		display: inline-block;
+	    font-size: 30px;
+	    color: white;
+	    margin: auto;}
 		input{
-			    background-color: #4a3131;
-    
-                border-color: #653939;
-                    display: inline-block;
-                 margin: auto;
-                  margin-top: 5px;
+			border:2px solid white;
+	        border-radius: 12px;
+	        background-color:rgba(54, 25, 25, .0);
+	        color: white;
+	        width: 200px;
+	        height: 30px;
+	        border-collapse: collapse;
+	        margin-top: 25px;
+	        box-sizing: border-box;
+	        text-align: center;
+	        font-size: 20px;
+	        margin: auto;
 		}
-			}}
+		#update{
+			height: 40px;
+			display: block;
+	        text-align: center;
+	        margin: 20px auto;
+	        color:rgb(255, 157, 0);;
+	        border:2px solid rgb(255, 157, 0);
+	        &:hover{
+	        	background-color:black;
+	        }
+			}}		}

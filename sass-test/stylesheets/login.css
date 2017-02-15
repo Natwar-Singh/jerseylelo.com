@@ -10,7 +10,7 @@
   margin-top: 200px;
 }
 /* line 11, ../sass/login.scss */
-#login #cross {
+#login .cross {
   position: absolute;
   top: -15px;
   right: -13px;

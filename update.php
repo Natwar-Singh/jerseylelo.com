@@ -16,5 +16,5 @@ else if ($_GET['action']==2){
 	$conn->query($sql);	
     }
 
-header('Location: admin.php');
+header('Location: users.php');
 ?>
