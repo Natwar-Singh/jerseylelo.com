@@ -6,4 +6,6 @@ jQuery(document).ready(function(){
 });
   if (!$("#error").length==0) {$("#login").css("display",'block')
        $("#form").css("margin-top",'10px');}
+if (!$("#login-first").length==0) {$("#login").css("display",'block');
+       }
 });

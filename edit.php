@@ -67,48 +67,49 @@
 
 	?>
 	
-	<?php echo "<P class='edit-field'>Role:</p>";
+	<?php 
 	  $sql = 'select role_name from users left join role on users.role_id=role.role_id where user_id= "'.$_SESSION['user'].'"';
-      $result=$conn->query($sql);
-      $sets=$result->fetch();
-      if($sets['role_name']=="Admin")
-      {
-    	$sql='select role_name from role where role_id='.$role_id;
-    	$result=$conn->query($sql);
-        $set=$result->fetch();
-        $role_name=$set['role_name'];
-        if ($role_name=="Admin")
+      $result = $conn->query($sql);
+      $sets = $result->fetch();
+      if($sets['role_name'] == "Admin")
+      { echo "<P class ='edit-field'>Role:</p>";
+    	$sql = 'select role_name from role where role_id ='.$role_id;
+    	$result = $conn->query($sql);
+        $set = $result->fetch();
+        $role_name = $set['role_name'];
+        if ($role_name == "Admin")
 	    {
-          echo '<select  name="role" class="edit-input">
-           <option selected="selected">Admin</option>
+          echo '<select  name ="role" class ="edit-input">
+           <option selected ="selected">Admin</option>
            <option >User</option>
            </select>';
 	    }
 	    else
 	    { 
-	      echo '<select  name="role" class="edit-input">
+	      echo '<select  name ="role" class ="edit-input">
            <option>Admin</option>
-           <option selected="selected">User</option>
+           <option selected ="selected">User</option>
            </select>';
 	    }
 	    
       }
     ?>
-        
-    <input type="submit" name="submit" value="Apply" class="permission">
+      <div class = "abc">  
+    <input type = "submit" name = "submit" value = "Apply" class = "permission">
 	
 	<?php 
-	if ($sets['role_name']=="Admin"){
-		echo '<a href="update.php?id='.$user_id.'&action=1" class="permission">delete</a>';
-	    if($state=="active")
+	if ($sets['role_name'] == "Admin"){
+		echo '<a href ="update.php?id ='.$user_id.'&action =1" class ="permission">delete</a>';
+	    if($state == "active")
 	    {
-	      echo '<a href="update.php?id='.$user_id.'&action=2" class="permission">Block</a>' ;
+	      echo '<a href ="update.php?id ='.$user_id.'&action = 2" class = "permission">Block</a>' ;
 	    }
 	    else
 	    {
-	      echo '<a href="update.php?id='.$user_id.'&action=3" class="permission">Activate</a>' ;
+	      echo '<a href = "update.php?id = '.$user_id.'&action = 3" class = "permission">Activate</a>' ;
 	    }
 	  }
-		?></form>
+		?></div>
+		</form>
  </body>
  </html>

@@ -23,7 +23,7 @@ $sql = 'SELECT url FROM images where f_id ="'.$f_id.'"';
 
 	<link rel="stylesheet" type="text/css" href="sass-test/stylesheets/show.css">
 </head>
-<body>
+
 <?php
 echo '<body style="background-image: url('.$set['url'].');">';?>
 <?php require "header.php" ?>

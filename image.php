@@ -1,24 +1,26 @@
 <?php 
-      if($player=="MALE"){$jpg_image = imagecreatefromjpeg('male.jpg');
-        $count=strlen($text);
-       $x=725+16*(6-$count);
-        $y=440;
-        $xn=740;
-        $yn=580;
-       if ($position_no<10) {
-        $xn=785;
+      if($player == "FEMALE"){
+       $jpg_image = imagecreatefromjpeg('female.jpg');
+       $count = strlen($text);
+       $x = 751 + 16 * (6 - $count);
+        $y = 480;
+        $xn = 775;
+        $yn = 610;
+       if ($position_no < 10) {
+        $xn = 810;
           
        }
        }
-      else{
-      $jpg_image = imagecreatefromjpeg('female.jpg');
-       $count=strlen($text);
-       $x=751+16*(6-$count);
-        $y=480;
-        $xn=775;
-        $yn=610;
-       if ($position_no<10) {
-        $xn=810;
+      else
+      {
+      $jpg_image = imagecreatefromjpeg('male.jpg');
+        $count = strlen($text);
+       $x = 725 + 16 * (6 - $count);
+        $y = 440;
+        $xn = 740;
+        $yn = 580;
+       if ($position_no < 10) {
+        $xn = 785;
           
        }}
 

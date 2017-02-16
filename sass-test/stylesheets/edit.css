@@ -46,6 +46,10 @@ body #content option {
   color: white;
 }
 /* line 41, ../sass/edit.scss */
+body #content .abc {
+  text-align: center;
+}
+/* line 44, ../sass/edit.scss */
 body #content .permission {
   display: inline-block;
   text-align: center;
@@ -58,7 +62,7 @@ body #content .permission {
   border-radius: 12px;
   text-decoration: none;
 }
-/* line 53, ../sass/edit.scss */
+/* line 56, ../sass/edit.scss */
 body #content .permission:hover {
   background-color: black;
 }

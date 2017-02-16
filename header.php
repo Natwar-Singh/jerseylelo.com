@@ -1,14 +1,14 @@
-<div id="top">
+<div id = "top">
 <?php
 if(isset($_SESSION['role'])){
-         	if ($_SESSION['role']=="Admin") {
-         		echo '<div class="wrap">
-                  <div class="icon">
-                  <div class="menu"></div><div class="menu"></div><div class="menu"></div>
+         	if ($_SESSION['role'] == "Admin") {
+         		echo '<div class = "wrap">
+                  <div class = "icon">
+                  <div class = "menu"></div><div class = "menu"></div><div class = "menu"></div>
                   </div>
-                  <span class="dropdown-content">
-                  <a href="positions.php" class="dropdown-element">Positions</a>
-                  <a href="users.php" class="dropdown-element">Users</a>
+                  <span class = "dropdown-content">
+                  <a href = "positions.php" class = "dropdown-element">Positions</a>
+                  <a href = "users.php" class = "dropdown-element">Users</a>
                   </span>
                   </div>';
          	}

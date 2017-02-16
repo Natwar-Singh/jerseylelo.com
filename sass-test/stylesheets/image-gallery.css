@@ -1,9 +1,15 @@
 /* line 1, ../sass/image-gallery.scss */
 body {
-  margin: 0px;
   background-color: #210505;
 }
 /* line 3, ../sass/image-gallery.scss */
+body h1 {
+  color: white;
+  text-align: center;
+  font-size: 35px;
+  margin-top: 5px;
+}
+/* line 9, ../sass/image-gallery.scss */
 body .image {
   padding: 10px;
   display: inline-block;
@@ -11,7 +17,7 @@ body .image {
   box-sizing: border-box;
   display: inline-block;
 }
-/* line 8, ../sass/image-gallery.scss */
+/* line 15, ../sass/image-gallery.scss */
 body .image img {
   width: 100%;
 }

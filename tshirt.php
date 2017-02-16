@@ -6,17 +6,20 @@ if(!isset($_SESSION['user'])){
 ?>
 
 <?php 
-  $player=$_POST['player'];
-  $name=strtoupper($_POST['name']);
-  $position=$_POST['position'];
-  $user_id=$_SESSION['user'];
+  $player = $_POST['player'];
+  if ($player == "SELECT PLAYER") {
+    $player = "both";
+  }
+  $name = strtoupper($_POST['name']);
+  $position = $_POST['position'];
+  $user_id = $_SESSION['user'];
   require 'connectdb.php';
-  $sql="use football";
+  $sql = "use football";
   $conn->query($sql);
   $text = $name;
   
   $sql = 'SELECT position_no FROM position where position_name = "'.$position.'"';
-  $result=$conn->query($sql);
+  $result = $conn->query($sql);
   foreach ($result as $row)
     {   
       $position_no=$row['position_no'];
@@ -24,8 +27,8 @@ if(!isset($_SESSION['user'])){
   require 'image.php';
   
   $sql = 'SELECT f_id FROM images where url ="'.$imgname.'"and user_id = "'.$user_id.'"';
-    $result=$conn->query($sql);
-    $set=$result->fetch();
+    $result = $conn->query($sql);
+    $set = $result->fetch();
     print_r($set);
     if(isset($set['f_id'])){echo "hai";}
     else{
@@ -39,9 +42,9 @@ if(!isset($_SESSION['user'])){
   $stmt->execute();
       }
   $sql = 'SELECT f_id FROM images where url ="'.$imgname.'"';
-    $result=$conn->query($sql);
-    $set=$result->fetch();
-    $id=$set['f_id'];
-  $conn=null;
+    $result = $conn->query($sql);
+    $set = $result->fetch();
+    $id = $set['f_id'];
+  $conn = null;
   header('Location: show.php?id='.$id);
 ?>
