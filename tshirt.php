@@ -1,5 +1,8 @@
 <?php
 session_start();
+if(!isset($_SESSION['user'])){
+  header('Location:index.php');
+}
 ?>
 
 <?php 
@@ -19,7 +22,7 @@ session_start();
       $position_no=$row['position_no'];
     }
   require 'image.php';
-
+  
   $sql = 'SELECT f_id FROM images where url ="'.$imgname.'"and user_id = "'.$user_id.'"';
     $result=$conn->query($sql);
     $set=$result->fetch();
@@ -34,7 +37,7 @@ session_start();
   $date = new DateTime();
   $stmt->bindParam(':date',$date->format('Y-m-d H:i:s'));
   $stmt->execute();
-}
+      }
   $sql = 'SELECT f_id FROM images where url ="'.$imgname.'"';
     $result=$conn->query($sql);
     $set=$result->fetch();

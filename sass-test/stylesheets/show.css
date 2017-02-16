@@ -3,6 +3,19 @@ body {
   background-size: 100%;
 }
 /* line 3, ../sass/show.scss */
-body a {
-  color: yellow;
+body .twitter-share-button, body #download {
+  color: white;
+  position: absolute;
+  bottom: 10px;
+  right: 50px;
+  font-size: 20px;
+  text-decoration: none;
+}
+/* line 10, ../sass/show.scss */
+body .twitter-share-button:hover, body #download:hover {
+  text-decoration: underline;
+}
+/* line 14, ../sass/show.scss */
+body #download {
+  right: 120px;
 }

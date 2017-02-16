@@ -1,6 +1,19 @@
 body{
 	background-size: 100%;
-	a{
-		color:yellow;
+	.twitter-share-button{
+		color:white;
+		position: absolute;
+		bottom: 10px;
+		right: 50px;
+		font-size: 20px;
+		text-decoration: none;
+		&:hover{
+			text-decoration:underline;
+		}
+	}
+	#download{
+		@extend .twitter-share-button;
+		right:120px;
+
 	}
 }

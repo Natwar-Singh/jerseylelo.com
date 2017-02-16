@@ -12,6 +12,7 @@
  </head>
  <body>
    <?php require 'connectdb.php'; ?>
+    <?php require 'header.php'; ?>
    <?php $user_id=$_GET['id']; ?>
    <?php 
      if(isset($_POST["name"]))
@@ -24,11 +25,18 @@
            WHERE user_id ="'.$user_id.'"';
            $conn->query($sql);
 		  }
+		  if(!$_POST['password']==null)
+	     {
+	  	   $password=md5($_POST['password']);
+		   $sql='UPDATE users
+           SET password ="'.$password.'" 
+           WHERE user_id ="'.$user_id.'"';
+           $conn->query($sql);
+		  }
 		  $stmt = $conn->prepare('UPDATE users
-		  SET name = :name,password=:password,email=:email,player=:player
+		  SET name = :name,email=:email,player=:player
 		  WHERE user_id ="'.$user_id.'"');
 		  $stmt->bindParam(':name',$_POST["name"]);
-		  $stmt->bindParam(':password',$_POST["password"]);
 		  $stmt->bindParam(':email',$_POST["email"]);
 		  $stmt->bindParam(':player',$_POST["player"]);
 		  $stmt->execute();

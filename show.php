@@ -33,7 +33,7 @@ echo '<body style="background-image: url('.$set['url'].');">';?>
   >
 Tweet
 </a>
-<a download="custom-filename.jpg" href=<?php echo $set['url'] ?>  title="ImageName">
+<a download="custom-filename.jpg" id="download" href=<?php echo $set['url'] ?>  title="ImageName">
     download
 </a>
 
