@@ -1,5 +1,8 @@
 <?php
 session_start();
+if(!isset($_SESSION['user'])){
+  header('Location:index.php');
+}
 require "connectdb.php";
 $f_id=$_GET['id'];
 $sql = 'SELECT url FROM images where f_id ="'.$f_id.'"';
@@ -10,7 +13,7 @@ $sql = 'SELECT url FROM images where f_id ="'.$f_id.'"';
 <!DOCTYPE html>
 <html>
 <head>
-<meta property="og:image" content=<?php $set['url']?>>
+<meta property="og:image" content=<?php echo $set['url']?>>
 <meta property="og:image:width" content="600">
 <meta property="og:image:height" content="315">
 <meta property="og:site_name" content="jerseylelo.com">

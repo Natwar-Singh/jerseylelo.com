@@ -11,7 +11,8 @@ else if ($_GET['action'] == 2){
 	$conn->query($sql);
     }
     else{
-    $sql = 'update users set state="active" where user_id='.$_GET['id'];
+    $sql ='update users set state="active" where user_id='.$_GET['id'];
+    echo $sql;
 	
 	$conn->query($sql);	
     }

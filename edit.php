@@ -1,8 +1,12 @@
 <?php session_start();
+if(!isset($_SESSION['user'])){
+  header('Location:index.php');
+}
  ?>
  <!DOCTYPE html>
  <html>
  <head>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
  	<title></title>
  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
   </script>
@@ -99,14 +103,14 @@
 	
 	<?php 
 	if ($sets['role_name'] == "Admin"){
-		echo '<a href ="update.php?id ='.$user_id.'&action =1" class ="permission">delete</a>';
+		echo '<a href ="update.php?id='.$user_id.'&action=1" class ="permission">delete</a>';
 	    if($state == "active")
 	    {
-	      echo '<a href ="update.php?id ='.$user_id.'&action = 2" class = "permission">Block</a>' ;
+	      echo '<a href = "update.php?id='.$user_id.'&action=2" class = "permission">Block</a>' ;
 	    }
 	    else
 	    {
-	      echo '<a href = "update.php?id = '.$user_id.'&action = 3" class = "permission">Activate</a>' ;
+	      echo '<a href = "update.php?id='.$user_id.'&action=3" class = "permission">Activate</a>' ;
 	    }
 	  }
 		?></div>

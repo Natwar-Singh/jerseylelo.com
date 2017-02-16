@@ -9,9 +9,10 @@ function varify($email,$password){
     foreach ($result as $row)
       { if($row['state'] == "active"){
         $match = true;
+        $_SESSION['user'] = $row['user_id'];
       }
 
-        $_SESSION['user'] = $row['user_id'];
+        
         $role_id = $row['role_id'];
       }
       if ($match == true) {
@@ -44,7 +45,6 @@ $role_id = varify($email,$password);
     $result = $conn->query($sql);
     $set = $result->fetch();
     echo $_SESSION['role'] = $set['role_name'];
-    
     header('Location: index.php');
     
   }

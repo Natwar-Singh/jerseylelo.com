@@ -19,12 +19,14 @@
 /* line 17, ../sass/signup.scss */
 #signup p {
   padding: 1px;
+  color: red;
+  text-align: center;
 }
-/* line 20, ../sass/signup.scss */
+/* line 22, ../sass/signup.scss */
 #signup #form {
   margin-top: 20px;
 }
-/* line 21, ../sass/signup.scss */
+/* line 23, ../sass/signup.scss */
 #signup #form .signup {
   width: 50%;
   display: block;
@@ -32,12 +34,12 @@
   border-collapse: collapse;
   margin-top: 8px;
 }
-/* line 29, ../sass/signup.scss */
+/* line 31, ../sass/signup.scss */
 #signup #form #signup_button {
   border: 2px solid #ff9d00;
   color: #ff9d00;
 }
-/* line 34, ../sass/signup.scss */
+/* line 36, ../sass/signup.scss */
 #signup #form #signup_button:hover {
   background-color: black;
 }

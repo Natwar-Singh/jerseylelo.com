@@ -1,7 +1,11 @@
-<?php session_start(); ?>
+<?php session_start();
+if(!isset($_SESSION['user'])){
+  header('Location:index.php');
+} ?>
 <!DOCTYPE html>
 <html>
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title></title>
 	
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
@@ -13,7 +17,7 @@
 </head>
 <body>
 <div class="user_list">
-<?php require 'connectdb.php'; ?>
+ <?php require 'connectdb.php'; ?>
  <?php require "header.php" ?>
 <h1>Users List</h1>
 	<table>
@@ -26,7 +30,7 @@
 	<?php
       echo "<tr>";
 	  $sql = 'SELECT * FROM users ';
-	  $result=$conn->query($sql);
+	  $result = $conn->query($sql);
 	  foreach ($result as $row)
 	  { $user_id=$row['user_id'];
 	    echo '<td>'.$row["name"].'</td>';

@@ -6,6 +6,12 @@
   $role_id = 2;
   $player = $_POST['player'];
   require "connectdb.php";
+  $sql = 'select user_id from users where email="'.$email.'"';
+  $result = $conn->query($sql);
+  $set = $result->fetch();
+  if (isset($set['user_id'])) {
+   header('Location:index.php?already=1');
+  }
   $stmt = $conn->prepare("INSERT INTO users (name,email,password,player,role_id,state) 
     VALUES (:name, :email, :password, :player,:role_id,:state)");
   $stmt->bindParam(':name', $name);

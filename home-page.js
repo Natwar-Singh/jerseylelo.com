@@ -8,4 +8,8 @@ jQuery(document).ready(function(){
        $("#form").css("margin-top",'10px');}
 if (!$("#login-first").length==0) {$("#login").css("display",'block');
        }
+       if (!$("#already").length==0) {
+       	$("#signup-error").append('EmailId already Exist');
+       	$("#signup").css("display",'block');
+       }
 });

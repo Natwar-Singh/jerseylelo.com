@@ -1,8 +1,12 @@
 <?php session_start();
+if(!isset($_SESSION['user'])){
+  header('Location:index.php');
+}
  ?>
 <!DOCTYPE html>
 <html>
 <head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title></title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
   </script>
@@ -29,12 +33,14 @@
 	}
 	?>
   <h1>Positions</h1><br>
-  <form action="admin.php" method="post" class="positions">
+  <form action="positions.php" method="post" class="positions">
   <?php 
     $sql = 'SELECT * FROM position ';
     $result=$conn->query($sql);
     foreach ($result as $row)
-    {
+    { if ($row["position_no"]==null) {
+     continue;
+    }
       echo '<p class="position-name">'.$row["position_name"].
             '</p><input type="text" name="'
 	        .$row["position_name"].
