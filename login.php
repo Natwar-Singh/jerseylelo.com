@@ -1,13 +1,15 @@
 <?php
 if(isset($_POST["email"])){
   require "connectdb.php";
+  //to veryfy user
 function varify($email,$password){
     GLOBAL $conn;
     $match = false;
     $sql = 'SELECT * FROM users where email = "'.$email.'" and password = "'.md5($password).'"';
     $result = $conn->query($sql);
     foreach ($result as $row)
-      { if($row['state'] == "active"){
+      { //to match the state
+        if($row['state'] == "active"){
         $match = true;
         $_SESSION['user'] = $row['user_id'];
       }
@@ -45,6 +47,7 @@ $role_id = varify($email,$password);
     $result = $conn->query($sql);
     $set = $result->fetch();
     echo $_SESSION['role'] = $set['role_name'];
+    //setting role name in session variable
     header('Location: index.php');
     
   }

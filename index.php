@@ -24,6 +24,7 @@ session_start();
   <?php require "signup.html" ?>
   <?php 
   if (isset($_GET['already'])) {
+    //if email already exist
     echo '<span id="already"></span>';
   }
   ?>
@@ -32,11 +33,11 @@ session_start();
     <div id = "info">
     <?php
     if(isset($_SESSION['user'])) 
-      {
+      { //if user is loged in send request to create image 
         echo '<form action = "tshirt.php" method="post">';
       }
       else
-      {
+      {//if users is not loged in then show login popup
         echo '<form action = "index.php" method = "post">';
       }
       if (isset($_POST['player'])) {

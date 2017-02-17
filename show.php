@@ -3,9 +3,10 @@ session_start();
 if(!isset($_SESSION['user'])){
   header('Location:index.php');
 }
-require "connectdb.php";
-$f_id=$_GET['id'];
-$sql = 'SELECT url FROM images where f_id ="'.$f_id.'"';
+    require "connectdb.php";
+    //to get the url of image
+    $f_id=$_GET['id'];
+    $sql = 'SELECT url FROM images where f_id ="'.$f_id.'" AND user_id='.$_SESSION['user'];
     $result=$conn->query($sql);
     $set=$result->fetch();
     $set['url']; 
@@ -28,6 +29,7 @@ $sql = 'SELECT url FROM images where f_id ="'.$f_id.'"';
 </head>
 
 <?php
+//seting the background image to required image
 echo '<body style="background-image: url('.$set['url'].');">';?>
 <?php require "header.php" ?>
  

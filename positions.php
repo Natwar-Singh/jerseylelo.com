@@ -19,7 +19,7 @@ if(!isset($_SESSION['user'])){
 <?php require "header.php" ?>
   <?php 
     if(isset($_POST["Defender"]))
-	{
+	{   //to update positions in position table
       $sql = 'SELECT * FROM position ';
       $result=$conn->query($sql);
       foreach ($result as $row) 
@@ -39,6 +39,7 @@ if(!isset($_SESSION['user'])){
     $result=$conn->query($sql);
     foreach ($result as $row)
     { if ($row["position_no"]==null) {
+      //to avoid default position to be changeable
      continue;
     }
       echo '<p class="position-name">'.$row["position_name"].

@@ -2,6 +2,7 @@
 <?php
 if(isset($_SESSION['role'])){
          	if ($_SESSION['role'] == "Admin") {
+               //dropdown menu for Admin to users list and positions
          		echo '<div class = "wrap">
                   <div class = "icon">
                   <div class = "menu"></div><div class = "menu"></div><div class = "menu"></div>
@@ -14,6 +15,7 @@ if(isset($_SESSION['role'])){
          	}
          }
 if (isset($_SESSION['user'])){
+   //to select login and logout buttons
    echo '<a class="nav-button" href="image-gallery.php">Your Images</a>
    <a class="nav-button" href="edit.php?id='.$_SESSION["user"].'" >Edit Profile</a>
    <a class="nav-button" href="logout.php">LogOut</a>'; }

@@ -17,12 +17,23 @@ if(!isset($_SESSION['user'])){
  <body>
    <?php require 'connectdb.php'; ?>
     <?php require 'header.php'; ?>
-   <?php $user_id=$_GET['id']; ?>
+   <?php
+    $sql = 'select role_name from users left join role on users.role_id=role.role_id where user_id= "'.$_SESSION['user'].'"';
+      $result = $conn->query($sql);
+      $sets = $result->fetch();
+      if($sets['role_name'] == 'Admin'){
+      	$user_id=$_GET['id'];
+      }
+      else{
+      	$user_id = $_SESSION['user'];
+        }
+        //this is done to prevent non admin user to edit other users information by url parameters
+     ?>
    <?php 
      if(isset($_POST["name"]))
 	   { 
 	     if(isset($_POST['role']))
-	     {
+	     { //role is only updated by admin this is to prevent error because when non admin updates there is no role field so it will be an error
 	  	   $role_name=$_POST['role'];
 		   $sql='UPDATE users
            SET role_id = (select role_id from role where role_name="'.$role_name.'")
@@ -30,13 +41,15 @@ if(!isset($_SESSION['user'])){
            $conn->query($sql);
 		  }
 		  if(!$_POST['password']==null)
-	     {
+	  	   //if password field is empty then password shoud not change
+	     { 
 	  	   $password=md5($_POST['password']);
 		   $sql='UPDATE users
            SET password ="'.$password.'" 
            WHERE user_id ="'.$user_id.'"';
            $conn->query($sql);
 		  }
+		  //update rest of the information
 		  $stmt = $conn->prepare('UPDATE users
 		  SET name = :name,email=:email,player=:player
 		  WHERE user_id ="'.$user_id.'"');
@@ -72,9 +85,7 @@ if(!isset($_SESSION['user'])){
 	?>
 	
 	<?php 
-	  $sql = 'select role_name from users left join role on users.role_id=role.role_id where user_id= "'.$_SESSION['user'].'"';
-      $result = $conn->query($sql);
-      $sets = $result->fetch();
+	  // Extra permitions for Admin
       if($sets['role_name'] == "Admin")
       { echo "<P class ='edit-field'>Role:</p>";
     	$sql = 'select role_name from role where role_id ='.$role_id;
@@ -82,7 +93,7 @@ if(!isset($_SESSION['user'])){
         $set = $result->fetch();
         $role_name = $set['role_name'];
         if ($role_name == "Admin")
-	    {
+	    { //to show default selected optin for role in select list
           echo '<select  name ="role" class ="edit-input">
            <option selected ="selected">Admin</option>
            <option >User</option>

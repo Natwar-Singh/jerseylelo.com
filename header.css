@@ -5,7 +5,7 @@
 	height: 30px;
 	text-align: center;
 	padding-top: 4px;
-	font-size: 20px;
+	font-size: 1.3em;
 	box-sizing: border-box;
 	color:white;
 	vertical-align: top; 
@@ -56,4 +56,11 @@ text-decoration:underline;
 .icon:hover{
 
 background-color:blue;}  
+@media only screen and (max-width: 760px) {
+  .nav-button{
+    font-size: 1em;
+  }
+
+}
+
 

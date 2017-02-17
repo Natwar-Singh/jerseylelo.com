@@ -31,8 +31,7 @@
       // Print Text On Image
       imagettftext($jpg_image, 40, 0, $x, $y, $white, $font_path, $text);
       imagettftext($jpg_image, 100, 0, $xn, $yn, $white, $font_path, $position_no);
-      // Send Image to Browser
-      $imgname="images/".$name.$position_no.$player.$user_id;
+      //saving image to file
       imagejpeg($jpg_image, $imgname, 100);
       // Clear Memory
       imagedestroy($jpg_image);
